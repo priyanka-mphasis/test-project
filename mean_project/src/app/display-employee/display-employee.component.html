@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of listcomment;let i = index">
+        <td>{{x.fname}}</td>
+        <td>{{x.lname}}</td>
+        <td>{{x.companyname}}</td>
+        <td>{{x.contactNo}}</td>
+        <td>{{x.message}}</td>
+        <td><button type="button" class="btn btn-cyan btn-sm" (click)="editEmployee(x.id,i)">Edit</button></td>
+        <td><button type="button" class="btn btn-danger btn-sm" (click)="deleteEmployee(x.id)">Delete</button></td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+

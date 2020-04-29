@@ -6,9 +6,9 @@ const mongoose = require('mongoose'),
   const displayStudent= function(req,res,next){
     Student.find()
            .then(result=>{
-              res.status(200).json({
-                result
-              });
+              res.status(200).json(
+                            result
+                           );
            })
            .catch(err=>{
               res.status(500).json({error:err});

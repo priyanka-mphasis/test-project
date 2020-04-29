@@ -1,0 +1,96 @@
+ <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="page-breadcrumb">
+                    <div class="row">
+                        <div class="col-12 d-flex no-block align-items-center">
+                            <h4 class="page-title">Form Basic</h4>
+                            <div class="ml-auto text-right">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Container fluid  -->
+                <!-- ============================================================== -->
+                <div class="container-fluid">
+                    <!-- ============================================================== -->
+                    <!-- Start Page Content -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <form class="form-horizontal" [formGroup]="MyForm" >
+                                    <div class="card-body">
+                                        <h4 class="card-title">Personal Info</h4>
+                                        <div class="form-group row">
+                                            <label for="fname" class="col-sm-3 text-right control-label col-form-label">First Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" formControlName="fname" class="form-control" id="fname" placeholder="First Name Here">
+                                            </div>        
+                                            
+                                            <div style="color:red;display:block;" class="invalid-feedback" *ngIf="MyForm.controls['fname']?.invalid && MyForm.controls['fname']?.touched">
+                                                <div style = "margin-left: 285px;" class="required-field">Firstname is required</div>
+                                        </div>
+
+                             
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="lname" class="col-sm-3 text-right control-label col-form-label">Last Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" formControlName="lname" class="form-control" id="lname" placeholder="Last Name Here">
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="lname" class="col-sm-3 text-right control-label col-form-label">Password</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password Here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="email1" class="col-sm-3 text-right control-label col-form-label">Company</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" formControlName="companyname" class="form-control" id="email1" placeholder="Company Name Here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" formControlName="contactNo" class="form-control" id="cono1" placeholder="Contact No Here">
+                                            
+                                                <input type="text" formControlName="empId" class="form-control" id="empId" [ngStyle]="{'display':'none'}">
+                    
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Message</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control"  formControlName="message"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-top">
+                                        <div class="card-body">
+                                            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Container fluid  -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
